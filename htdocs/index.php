@@ -81,7 +81,7 @@
 				</div>
 
 				<div id="clock-digital">
-					<h2>Aktuelle Uhrzeit</h2>
+					<h2>current time</h2>
 					<?php
 						echo $currentTime[hours].':'.$currentTime[minutes].':'.$currentTime[seconds];
 					?>
