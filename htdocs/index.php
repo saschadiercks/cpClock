@@ -50,18 +50,19 @@
 	.hand-container.hours   { animation: rotate 43200s	infinite; }
 
 	#hand-hours {
-		height: 120px;
-		width: 10px;
+		height: 33%;
+		width: 2%;
 		<?php echo 'transform: rotate('.$handHours.'deg) translateY(-100%)'; ?>
 	}
 	#hand-minutes {
-		height: 240px;
-		width: 10px;
+		height: 45%;
+		width: 2%;
 		<?php echo 'transform: rotate('.$handMinutes.'deg) translateY(-100%)'; ?>
 	}
 	#hand-seconds {
-		height: 240px;
-		width: 2px;
+		height: 45%;
+		min-width: 1px;
+		width: .4%;
 		<?php echo 'transform: rotate('.$handSeconds.'deg) translateY(-100%)'; ?>
 	}
 
