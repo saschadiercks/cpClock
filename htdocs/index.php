@@ -45,9 +45,9 @@
 		position: absolute;
 	}
 
-	.hand-container.seconds { animation: rotate 60s steps(60); }
-	.hand-container.minutes { animation: rotate 3600s; }
-	.hand-container.hours { animation: rotate 43200s; }
+	.hand-container.seconds { animation: rotate 60s		infinite steps(60); }
+	.hand-container.minutes { animation: rotate 3600s 	infinite; }
+	.hand-container.hours   { animation: rotate 43200s	infinite; }
 
 	#hand-hours {
 		height: 120px;
