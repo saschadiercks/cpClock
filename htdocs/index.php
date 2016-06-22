@@ -66,7 +66,7 @@
 		<?php echo 'transform: rotate('.$handSeconds.'deg) translateY(-100%)'; ?>
 	}
 
-	#watchface {
+	#clockface {
 		border: 1px solid #ccc;
 		border-radius: 99em;
 		margin: auto;
@@ -88,7 +88,7 @@
 
 
 				<div id="clock-analog">
-					<div id="watchface">
+					<div id="clockface">
 						<div class="hand-container hours">
 							<div class="hand" id="hand-hours"></div>
 						</div>
