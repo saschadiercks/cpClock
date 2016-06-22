@@ -46,8 +46,8 @@
 	}
 
 	.hand-container.seconds { animation: rotate 60s		infinite steps(60); }
-	.hand-container.minutes { animation: rotate 3600s 	infinite; }
-	.hand-container.hours   { animation: rotate 43200s	infinite; }
+	.hand-container.minutes { animation: rotate 3600s 	infinite steps(60); }
+	.hand-container.hours   { animation: rotate 43200s	infinite linear; }
 
 	#hand-hours {
 		height: 33%;
@@ -71,8 +71,8 @@
 		border-radius: 99em;
 		margin: auto;
 		position: relative;
-		height: 500px;
-		width: 500px;
+		height: 300px;
+		width: 300px;
 	}
 	</style>
 </head>
