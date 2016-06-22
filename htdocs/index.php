@@ -16,6 +16,8 @@
 	$handHours = $degreeHours * $currentTime[hours];
 	$handMinutes = $degreeMinutes * $currentTime[minutes];
 	$handSeconds = $degreeSeconds * $currentTime[seconds];
+
+	// TODO: Minuten und Sekunden synchronisieren
 ?>
 
 <!DOCTYPE html>
