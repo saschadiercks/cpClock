@@ -28,6 +28,10 @@
 	<?php require_once 'modules/framework/head-meta.php'; ?>
 
 	<style media="screen">
+	@keyframes rotate {
+		100% { transform: rotateZ(360deg); }
+	}
+
 	.hand {
 		background-color: #000;
 		position: absolute;
@@ -35,6 +39,16 @@
 		top: 50%;
 		left: 50%;
 	}
+	.hand-container {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+	}
+
+	.hand-container.seconds { animation: rotate 60s steps(60); }
+	.hand-container.minutes { animation: rotate 3600s; }
+	.hand-container.hours { animation: rotate 43200s; }
+
 	#hand-hours {
 		height: 120px;
 		width: 10px;
@@ -51,7 +65,7 @@
 		<?php echo 'transform: rotate('.$handSeconds.'deg) translateY(-100%)'; ?>
 	}
 
-	#clockface {
+	#watchface {
 		border: 1px solid #ccc;
 		border-radius: 99em;
 		margin: auto;
@@ -73,10 +87,16 @@
 
 
 				<div id="clock-analog">
-					<div id="clockface">
-						<div class="hand" id="hand-hours"></div>
-						<div class="hand" id="hand-minutes"></div>
-						<div class="hand" id="hand-seconds"></div>
+					<div id="watchface">
+						<div class="hand-container hours">
+							<div class="hand" id="hand-hours"></div>
+						</div>
+						<div class="hand-container minutes">
+							<div class="hand" id="hand-minutes"></div>
+						</div>
+						<div class="hand-container seconds">
+							<div class="hand" id="hand-seconds"></div>
+						</div>
 					</div>
 				</div>
 
