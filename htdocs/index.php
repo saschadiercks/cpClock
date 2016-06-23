@@ -17,7 +17,8 @@
 	$handMinutes = $degreeMinutes * $currentTime[minutes];
 	$handSeconds = $degreeSeconds * $currentTime[seconds];
 
-	// TODO: Minuten und Sekunden synchronisieren
+	// TODO: Sync minutes amd seconds
+	// TODO: improve initial-position of hour-hand
 ?>
 
 <!DOCTYPE html>
@@ -54,21 +55,22 @@
 	#hand-hours {
 		height: 33%;
 		width: 2%;
-		<?php echo 'transform: rotate('.$handHours.'deg) translateY(-100%)'; ?>
+		<?php echo 'transform: rotate('.$handHours.'deg) translate(-50%,-100%)'; ?>
 	}
 	#hand-minutes {
 		height: 45%;
 		width: 2%;
-		<?php echo 'transform: rotate('.$handMinutes.'deg) translateY(-100%)'; ?>
+		<?php echo 'transform: rotate('.$handMinutes.'deg) translate(-50%,-100%)'; ?>
 	}
 	#hand-seconds {
 		height: 45%;
 		min-width: 1px;
 		width: .4%;
-		<?php echo 'transform: rotate('.$handSeconds.'deg) translateY(-100%)'; ?>
+		<?php echo 'transform: rotate('.$handSeconds.'deg) translate(-50%,-100%)'; ?>
 	}
 
 	#clockface {
+		background-image: url("assets/images/clockface.svg");
 		border: 1px solid #ccc;
 		border-radius: 99em;
 		margin: auto;
