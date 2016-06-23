@@ -31,53 +31,55 @@
 	<?php require_once 'modules/framework/head-meta.php'; ?>
 
 	<style media="screen">
-	@keyframes rotate {
-		100% { transform: rotateZ(360deg); }
-	}
+		body { text-align: center; }
 
-	.hand {
-		background-color: #000;
-		position: absolute;
-		transform-origin: 0 0;
-		top: 50%;
-		left: 50%;
-	}
-	.hand-container {
-		height: 100%;
-		width: 100%;
-		position: absolute;
-	}
+		@keyframes rotate {
+			100% { transform: rotateZ(360deg); }
+		}
 
-	.hand-container.seconds { animation: rotate 60s		infinite steps(60); }
-	.hand-container.minutes { animation: rotate 3600s 	infinite steps(60); }
-	.hand-container.hours   { animation: rotate 43200s	infinite linear; }
+		.hand {
+			background-color: #000;
+			position: absolute;
+			transform-origin: 0 0;
+			top: 50%;
+			left: 50%;
+		}
+		.hand-container {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+		}
 
-	#hand-hours {
-		height: 33%;
-		width: 2%;
-		<?php echo 'transform: rotate('.$handHours.'deg) translate(-50%,-100%)'; ?>
-	}
-	#hand-minutes {
-		height: 45%;
-		width: 2%;
-		<?php echo 'transform: rotate('.$handMinutes.'deg) translate(-50%,-100%)'; ?>
-	}
-	#hand-seconds {
-		height: 45%;
-		min-width: 1px;
-		width: .4%;
-		<?php echo 'transform: rotate('.$handSeconds.'deg) translate(-50%,-100%)'; ?>
-	}
+		.hand-container.seconds { animation: rotate 60s		infinite steps(60); }
+		.hand-container.minutes { animation: rotate 3600s 	infinite steps(60); }
+		.hand-container.hours   { animation: rotate 43200s	infinite linear; }
 
-	#clockface {
-		background-image: url("assets/images/clockface.svg");
-		border: 1px solid #ccc;
-		border-radius: 99em;
-		margin: auto;
-		position: relative;
-		height: 300px;
-		width: 300px;
-	}
+		#hand-hours {
+			height: 33%;
+			width: 2%;
+			<?php echo 'transform: rotate('.$handHours.'deg) translate(-50%,-100%)'; ?>
+		}
+		#hand-minutes {
+			height: 45%;
+			width: 2%;
+			<?php echo 'transform: rotate('.$handMinutes.'deg) translate(-50%,-100%)'; ?>
+		}
+		#hand-seconds {
+			height: 45%;
+			min-width: 1px;
+			width: .4%;
+			<?php echo 'transform: rotate('.$handSeconds.'deg) translate(-50%,-100%)'; ?>
+		}
+
+		#clockface {
+			background-image: url("assets/images/clockface.svg");
+			border: 1px solid #ccc;
+			border-radius: 99em;
+			margin: auto;
+			position: relative;
+			height: 300px;
+			width: 300px;
+		}
 	</style>
 </head>
 
