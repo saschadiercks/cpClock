@@ -72,8 +72,8 @@
 		}
 
 		#clockface {
+			background-color: #fffdf6;
 			background-image: url("assets/images/clockface.svg");
-			border: 1px solid #ccc;
 			border-radius: 99em;
 			margin: auto;
 			position: relative;
