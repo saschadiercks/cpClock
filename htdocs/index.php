@@ -16,6 +16,9 @@
 	$handHours = $degreeHours * $currentTime[hours];
 	$handMinutes = $degreeMinutes * $currentTime[minutes];
 	$handSeconds = $degreeSeconds * $currentTime[seconds];
+
+	// TODO: Sync minutes amd seconds
+	// TODO: improve initial-position of hour-hand
 ?>
 
 <!DOCTYPE html>
@@ -46,32 +49,34 @@
 	}
 
 	.hand-container.seconds { animation: rotate 60s		infinite steps(60); }
-	.hand-container.minutes { animation: rotate 3600s 	infinite; }
-	.hand-container.hours   { animation: rotate 43200s	infinite; }
+	.hand-container.minutes { animation: rotate 3600s 	infinite steps(60); }
+	.hand-container.hours   { animation: rotate 43200s	infinite linear; }
 
 	#hand-hours {
-		height: 120px;
-		width: 10px;
-		<?php echo 'transform: rotate('.$handHours.'deg) translateY(-100%)'; ?>
+		height: 33%;
+		width: 2%;
+		<?php echo 'transform: rotate('.$handHours.'deg) translate(-50%,-100%)'; ?>
 	}
 	#hand-minutes {
-		height: 240px;
-		width: 10px;
-		<?php echo 'transform: rotate('.$handMinutes.'deg) translateY(-100%)'; ?>
+		height: 45%;
+		width: 2%;
+		<?php echo 'transform: rotate('.$handMinutes.'deg) translate(-50%,-100%)'; ?>
 	}
 	#hand-seconds {
-		height: 240px;
-		width: 2px;
-		<?php echo 'transform: rotate('.$handSeconds.'deg) translateY(-100%)'; ?>
+		height: 45%;
+		min-width: 1px;
+		width: .4%;
+		<?php echo 'transform: rotate('.$handSeconds.'deg) translate(-50%,-100%)'; ?>
 	}
 
-	#watchface {
+	#clockface {
+		background-image: url("assets/images/clockface.svg");
 		border: 1px solid #ccc;
 		border-radius: 99em;
 		margin: auto;
 		position: relative;
-		height: 500px;
-		width: 500px;
+		height: 300px;
+		width: 300px;
 	}
 	</style>
 </head>
@@ -87,7 +92,7 @@
 
 
 				<div id="clock-analog">
-					<div id="watchface">
+					<div id="clockface">
 						<div class="hand-container hours">
 							<div class="hand" id="hand-hours"></div>
 						</div>
