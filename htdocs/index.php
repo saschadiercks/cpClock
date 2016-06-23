@@ -38,7 +38,7 @@
 	.hand {
 		background-color: #000;
 		position: absolute;
-		transform-origin: 50% 0;
+		transform-origin: 0 0;
 		top: 50%;
 		left: 50%;
 	}
