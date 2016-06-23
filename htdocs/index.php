@@ -25,9 +25,9 @@
 <html dir="ltr" lang="de">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>__Inpu Title__</title>
-	<meta name="description" content="description" />
-	<meta name="keywords" content="keywords" />
+	<title>Fragments / Clock</title>
+	<meta name="description" content="Clock - an analog clock built with PHP/CSS" />
+	<meta name="keywords" content="clock, php, css" />
 	<?php require_once 'modules/framework/head-meta.php'; ?>
 
 	<style media="screen">
