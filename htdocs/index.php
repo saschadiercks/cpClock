@@ -13,11 +13,9 @@
 	$degreeSeconds = 360/60;
 
 	// set handles to display current time
-	$handHours = $degreeHours * $currentTime[hours] + $currentTime[minutes]/2;	// 1 hour = 30degrees / hour-hand advances 0.5 degress with every passing minute
-	$handMinutes = $degreeMinutes * $currentTime[minutes];
+	$handHours = $degreeHours * $currentTime[hours] + $currentTime[minutes]/2;			// 1 hour = 30degrees / hour-hand advances 0.5 degress with every passing minute
+	$handMinutes = $degreeMinutes * $currentTime[minutes] + $currentTime[seconds]/10;	// 1 min = 6degrees / minute-hand advances 0.1 degress with every passing second
 	$handSeconds = $degreeSeconds * $currentTime[seconds];
-
-	// TODO: Sync minutes amd seconds
 ?>
 
 <!DOCTYPE html>
@@ -37,11 +35,16 @@
 		}
 
 		.hand {
-			background-color: #000;
 			position: absolute;
 			transform-origin: 0 0;
 			top: 50%;
 			left: 50%;
+			height: 50%;	/* scale hand-svg */
+		}
+		.hand img {
+			display: block;	/* remove whitespace */
+			height: 100%;	/* scale hand-svg */
+			width: auto;	/* scale hand-svg */
 		}
 		.hand-container {
 			height: 100%;
@@ -50,20 +53,13 @@
 		}
 
 		.hand-container.seconds { animation: rotate 60s		infinite steps(60); }
-		.hand-container.minutes { animation: rotate 3600s 	infinite steps(60); }
+		.hand-container.minutes { animation: rotate 3600s 	infinite linear; }
 		.hand-container.hours   { animation: rotate 43200s	infinite linear; }
 
-		#hand-hours {
-			height: 33%;
-			width: 2%;
-			<?php echo 'transform: rotate('.$handHours.'deg) translate(-50%,-100%)'; ?>
-		}
-		#hand-minutes {
-			height: 45%;
-			width: 2%;
-			<?php echo 'transform: rotate('.$handMinutes.'deg) translate(-50%,-100%)'; ?>
-		}
+		#hand-hours { <?php echo 'transform: rotate('.$handHours.'deg) translate(-50%,-100%)'; ?> }
+		#hand-minutes {	<?php echo 'transform: rotate('.$handMinutes.'deg) translate(-50%,-100%)'; ?> }
 		#hand-seconds {
+			background-color: #000;
 			height: 45%;
 			min-width: 1px;
 			width: .4%;
@@ -76,8 +72,8 @@
 			border-radius: 99em;
 			margin: auto;
 			position: relative;
-			height: 300px;
-			width: 300px;
+			height: 400px;
+			width: 400px;
 		}
 	</style>
 </head>
@@ -95,10 +91,10 @@
 				<div id="clock-analog">
 					<div id="clockface">
 						<div class="hand-container hours">
-							<div class="hand" id="hand-hours"></div>
+							<div class="hand" id="hand-hours"><img src="assets/images/hand-hours.svg" alt="hand hours" width="40" height="150"/></div>
 						</div>
 						<div class="hand-container minutes">
-							<div class="hand" id="hand-minutes"></div>
+							<div class="hand" id="hand-minutes"><img src="assets/images/hand-minutes.svg" alt="hand hours" width="40" height="150"/></div>
 						</div>
 						<div class="hand-container seconds">
 							<div class="hand" id="hand-seconds"></div>
