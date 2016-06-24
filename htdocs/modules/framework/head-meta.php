@@ -5,7 +5,7 @@
 <meta name="publisher" content="__Input Publisher__" />
 <meta name="MSSmartTagsPreventParsing" content="TRUE" />
 <meta http-equiv="imagetoolbar" content="no" />
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <!-- Favicon, CSS -->
 <!-- <link href="favicon.ico" rel="shortcut icon"/>
