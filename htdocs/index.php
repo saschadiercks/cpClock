@@ -13,12 +13,11 @@
 	$degreeSeconds = 360/60;
 
 	// set handles to display current time
-	$handHours = $degreeHours * $currentTime[hours];
+	$handHours = $degreeHours * $currentTime[hours] + $currentTime[minutes]/2;	// 1 hour = 30degrees / hour-hand advances 0.5 degress with every passing minute
 	$handMinutes = $degreeMinutes * $currentTime[minutes];
 	$handSeconds = $degreeSeconds * $currentTime[seconds];
 
 	// TODO: Sync minutes amd seconds
-	// TODO: improve initial-position of hour-hand
 ?>
 
 <!DOCTYPE html>
