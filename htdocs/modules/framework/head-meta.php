@@ -11,5 +11,5 @@
 <!-- <link href="favicon.ico" rel="shortcut icon"/>
 <link href="apple-touch-icon-foto-57x57-precomposed.png" rel="apple-touch-icon-precomposed" />
 <link href="apple-touch-icon-foto-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114" />
-<link href="/assets/css/mobile.min.css" rel="stylesheet" type="text/css" media="screen and (max-width:767px)" />
-<link href="/assets/css/site.min.css" rel="stylesheet" type="text/css" media="screen and (min-width:768px)" /> -->
+<link href="/assets/css/mobile.min.css" rel="stylesheet" type="text/css" media="screen and (max-width:767px)" /> -->
+<link href="assets/css/site.min.css" rel="stylesheet" type="text/css" media="screen" />

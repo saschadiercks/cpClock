@@ -32,15 +32,26 @@
 		/* -- animations -- */
 		@keyframes rotate { 100% { transform: rotateZ(360deg); } }
 
+		/* -- Layout --*/
+		#clock-analog {
+			margin: auto;
+			max-width: 960px;
+			position: relative;
+		}
+		#clockface {
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			height: 42%;
+			width: 42%;
+		}
+
 		/* -- style clockface -- */
 		#clockface {
 			background-color: #f7f4f4;
 			background-image: url("assets/images/clockface.svg");
 			border-radius: 99em;
-			margin: auto;
-			position: relative;
-			height: 400px;
-			width: 400px;
 		}
 
 		/* -- set start position of hands -- */
@@ -86,10 +97,12 @@
 
 			<main role="content">
 				<header>
-					<h1>Clock</h1>
+					<h1>fragments/clock</h1>
+					<p>An analog clock animated with CSS only. The time and intial postions of hands are calculated using PHP. No JS, no cheating.</p>
 				</header>
 
 				<div id="clock-analog">
+					<img src="assets/images/clock-environment.jpg" />
 					<div id="clockface">
 						<div class="hand-container hours">
 							<div class="hand" id="hand-hours"><img src="assets/images/hand-hours.svg" alt="hand hours" width="40" height="150"/></div>
