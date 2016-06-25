@@ -8,14 +8,14 @@
 	);
 
 	// set degrees for timevalues to position handles
-	$degreeHours = 360/12;
-	$degreeMinutes = 360/60;
-	$degreeSeconds = 360/60;
+	$degreeHours = 360/12;		// 1 hour = 30degrees
+	$degreeMinutes = 360/60;	// 1 min = 6degrees
+	$degreeSeconds = 360/60;	// 1 second = 6degrees
 
 	// set handles to display current time
 	$handHours = $degreeHours * $currentTime[hours] + $currentTime[minutes]/2;			// 1 hour = 30degrees / hour-hand advances 0.5 degress with every passing minute
 	$handMinutes = $degreeMinutes * $currentTime[minutes] + $currentTime[seconds]/10;	// 1 min = 6degrees / minute-hand advances 0.1 degress with every passing second
-	$handSeconds = $degreeSeconds * $currentTime[seconds];
+	$handSeconds = $degreeSeconds * $currentTime[seconds];								// 1 second = 6degrees
 ?>
 
 <!DOCTYPE html>
@@ -27,35 +27,23 @@
 	<meta name="keywords" content="clock, php, css" />
 	<?php require_once 'modules/framework/head-meta.php'; ?>
 
+	<!-- using onpage-CSS for project-pages -->
 	<style media="screen">
-		body { text-align: center; }
+		/* -- animations -- */
+		@keyframes rotate { 100% { transform: rotateZ(360deg); } }
 
-		@keyframes rotate {
-			100% { transform: rotateZ(360deg); }
+		/* -- style clockface -- */
+		#clockface {
+			background-color: #f7f4f4;
+			background-image: url("assets/images/clockface.svg");
+			border-radius: 99em;
+			margin: auto;
+			position: relative;
+			height: 400px;
+			width: 400px;
 		}
 
-		.hand {
-			position: absolute;
-			transform-origin: 0 0;
-			top: 50%;
-			left: 50%;
-			height: 50%;	/* scale hand-svg */
-		}
-		.hand img {
-			display: block;	/* remove whitespace */
-			height: 100%;	/* scale hand-svg */
-			width: auto;	/* scale hand-svg */
-		}
-		.hand-container {
-			height: 100%;
-			width: 100%;
-			position: absolute;
-		}
-
-		.hand-container.seconds { animation: rotate 60s		infinite steps(60); }
-		.hand-container.minutes { animation: rotate 3600s 	infinite linear; }
-		.hand-container.hours   { animation: rotate 43200s	infinite linear; }
-
+		/* -- set start position of hands -- */
 		#hand-hours { <?php echo 'transform: rotate('.$handHours.'deg) translate(-50%,-100%)'; ?> }
 		#hand-minutes {	<?php echo 'transform: rotate('.$handMinutes.'deg) translate(-50%,-100%)'; ?> }
 		#hand-seconds {
@@ -66,27 +54,40 @@
 			<?php echo 'transform: rotate('.$handSeconds.'deg) translate(-50%,-100%)'; ?>
 		}
 
-		#clockface {
-			background-color: #f7f4f4;
-			background-image: url("assets/images/clockface.svg");
-			border-radius: 99em;
-			margin: auto;
-			position: relative;
-			height: 400px;
-			width: 400px;
+		/* -- prepare styling of hands -- */
+		.hand {
+			position: absolute;
+			transform-origin: 0 0;
+			top: 50%;
+			left: 50%;
+			height: 50%;	/* prepare scaling of hand-svg */
 		}
+		.hand img {
+			height: 100%;	/* scale hand-svg to match container */
+			width: auto;	/* scale hand-svg to match container */
+		}
+		.hand-container {
+			height: 100%;	/* take space of clock to animate around center */
+			width: 100%;	/* take space of clock to animate around center */
+			position: absolute;
+		}
+
+		/* -- animate hands -- */
+		.hand-container.seconds { animation: rotate 60s		infinite steps(60);	}
+		.hand-container.minutes { animation: rotate 3600s 	infinite linear;	}
+		.hand-container.hours   { animation: rotate 43200s	infinite linear;	}
 	</style>
 </head>
 
 <body id="index">
 	<div class="wrapper">
-		<?php require_once 'modules/framework/header.php'; ?>
-
+		<!-- <?php require_once 'modules/framework/header.php'; ?> -->
 		<div class="inner">
 
 			<main role="content">
-				<h1>Clock</h1>
-
+				<header>
+					<h1>Clock</h1>
+				</header>
 
 				<div id="clock-analog">
 					<div id="clockface">
@@ -100,13 +101,6 @@
 							<div class="hand" id="hand-seconds"></div>
 						</div>
 					</div>
-				</div>
-
-				<div id="clock-digital">
-					<h2>current time</h2>
-					<?php
-						echo $currentTime[hours].':'.$currentTime[minutes].':'.$currentTime[seconds];
-					?>
 				</div>
 			</main>
 		</div>
