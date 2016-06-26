@@ -122,6 +122,7 @@
 		<?php require_once 'modules/framework/footer.php'; ?>
 	</div><!-- /.wrapper -->
 
+	<?php require_once 'modules/framework/fork-github.php'; ?>
 	<?php require_once 'modules/framework/javascript.php'; ?>
 </body>
 </html>
