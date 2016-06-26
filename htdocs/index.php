@@ -43,7 +43,7 @@
 			position: absolute;
 			top: 50%;
 			transform: translate(-50%,-50%);
-			height: 42%;
+			height: 41.8%;
 			width: 42%;
 		}
 
@@ -52,6 +52,7 @@
 			background-color: #f7f4f4;
 			background-image: url("assets/images/clockface.svg");
 			border-radius: 99em;
+			box-shadow: 0.7em 1em 3em 2em rgba(0,0,0,.3) inset;
 		}
 
 		/* -- set start position of hands -- */
