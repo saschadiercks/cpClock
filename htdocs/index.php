@@ -72,12 +72,9 @@
 			transform-origin: 0 0;
 			top: 50%;
 			left: 50%;
-			height: 50%;	/* prepare scaling of hand-svg */
+			width: 10%;
 		}
-		.hand img {
-			height: 100%;	/* scale hand-svg to match container */
-			width: auto;	/* scale hand-svg to match container */
-		}
+
 		.hand-container {
 			height: 100%;	/* take space of clock to animate around center */
 			width: 100%;	/* take space of clock to animate around center */
