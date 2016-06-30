@@ -1,6 +1,6 @@
-# Fragments
-A small collection of experiments
-
-## Clock
-An analog watch, with changeable watchfaces.
+# cpClock
+(An analog clock animated with CSS only)
 PHP to get the current time and CSS to animate
+
+TODO
+- changeable watchfaces
