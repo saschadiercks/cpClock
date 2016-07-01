@@ -56,15 +56,9 @@
 		}
 
 		/* -- set start position of hands -- */
-		#hand-hours { <?php echo 'transform: rotate('.$handHours.'deg) translate(-50%,-100%)'; ?> }
-		#hand-minutes {	<?php echo 'transform: rotate('.$handMinutes.'deg) translate(-50%,-100%)'; ?> }
-		#hand-seconds {
-			background-color: #000;
-			height: 45%;
-			min-width: 1px;
-			width: .4%;
-			<?php echo 'transform: rotate('.$handSeconds.'deg) translate(-50%,-100%)'; ?>
-		}
+		#hand-hours {	<?php echo 'transform: rotate('.$handHours.'deg)	translate(-50%,-100%)'; ?> }
+		#hand-minutes {	<?php echo 'transform: rotate('.$handMinutes.'deg)	translate(-50%,-100%)'; ?> }
+		#hand-seconds {	<?php echo 'transform: rotate('.$handSeconds.'deg)	translate(-50%,-100%)'; ?> }
 
 		/* -- prepare styling of hands -- */
 		.hand {
@@ -72,7 +66,7 @@
 			transform-origin: 0 0;
 			top: 50%;
 			left: 50%;
-			width: 10%;
+			width: 12%;
 		}
 
 		.hand-container {
@@ -88,16 +82,10 @@
 	</style>
 </head>
 
-<body id="index">
+<body>
 	<div class="wrapper">
-		<!-- <?php require_once 'modules/framework/header.php'; ?> -->
 		<div class="inner">
-
 			<main role="content">
-				<header>
-					<h1>fragments/clock</h1>
-					<p>An analog clock animated with CSS only. The time and intial postions of hands are calculated using PHP. No JS, no cheating.</p>
-				</header>
 
 				<div id="clock-analog">
 					<img src="assets/images/clock-environment.jpg" />
@@ -109,17 +97,16 @@
 							<div class="hand" id="hand-minutes"><img src="assets/images/hand-minutes.svg" alt="hand hours" width="40" height="150"/></div>
 						</div>
 						<div class="hand-container seconds">
-							<div class="hand" id="hand-seconds"></div>
+							<div class="hand" id="hand-seconds"><img src="assets/images/hand-seconds.svg" alt="hand hours" width="40" height="150"/></div>
 						</div>
 					</div>
 				</div>
-			</main>
-		</div>
 
-		<?php require_once 'modules/framework/footer.php'; ?>
+			</main>
+		</div><!-- /.inner -->
+
 	</div><!-- /.wrapper -->
 
 	<?php require_once 'modules/framework/fork-github.php'; ?>
-	<?php require_once 'modules/framework/javascript.php'; ?>
 </body>
 </html>
