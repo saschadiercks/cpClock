@@ -82,16 +82,10 @@
 	</style>
 </head>
 
-<body id="index">
+<body>
 	<div class="wrapper">
-		<!-- <?php require_once 'modules/framework/header.php'; ?> -->
 		<div class="inner">
-
 			<main role="content">
-				<header>
-					<h1>fragments/clock</h1>
-					<p>An analog clock animated with CSS only. The time and intial postions of hands are calculated using PHP. No JS, no cheating.</p>
-				</header>
 
 				<div id="clock-analog">
 					<img src="assets/images/clock-environment.jpg" />
@@ -107,13 +101,12 @@
 						</div>
 					</div>
 				</div>
-			</main>
-		</div>
 
-		<?php require_once 'modules/framework/footer.php'; ?>
+			</main>
+		</div><!-- /.inner -->
+
 	</div><!-- /.wrapper -->
 
 	<?php require_once 'modules/framework/fork-github.php'; ?>
-	<?php require_once 'modules/framework/javascript.php'; ?>
 </body>
 </html>
