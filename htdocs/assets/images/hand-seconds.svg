@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 40 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,-300,-150.006)">
+        <g id="hand-seconds" transform="matrix(1,-4.89859e-17,-4.89859e-17,1.2,-9,-41.994)">
+            <clipPath id="_clip1">
+                <rect x="309" y="160" width="40" height="125"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(1,4.08216e-17,4.08216e-17,0.833333,9,28.3283)">
+                    <path d="M319,172.126L319,159C319,158.448 319.448,158 320,158C320.552,158 321,158.448 321,159L321,172.126C322.724,172.571 324,174.138 324,176C324,177.862 322.724,179.429 321,179.874L321,307C321,307.552 320.552,308 320,308C319.448,308 319,307.552 319,307L319,179.874C317.276,179.429 316,177.862 316,176C316,174.138 317.276,172.571 319,172.126ZM320,174C321.104,174 322,174.896 322,176C322,177.104 321.104,178 320,178C318.896,178 318,177.104 318,176C318,174.896 318.896,174 320,174Z" style="fill:rgb(21,28,36);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

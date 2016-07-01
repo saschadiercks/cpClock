@@ -7,11 +7,11 @@
                 <rect x="58" y="35" width="300" height="300"/>
             </clipPath>
             <g clip-path="url(#_clip1)">
-                <path d="M208,35C290.787,35 358,102.213 358,185C358,267.787 290.787,335 208,335C125.213,335 58,267.787 58,185C58,102.213 125.213,35 208,35ZM208,41C287.476,41 352,105.524 352,185C352,264.476 287.476,329 208,329C128.524,329 64,264.476 64,185C64,105.524 128.524,41 208,41Z" style="fill:none;stroke-width:1px;stroke:rgb(21,28,36);"/>
-                <g id="Nabe" transform="matrix(2.2,0,0,2.2,-122,-145)">
+                <path id="borders" d="M208,35C290.787,35 358,102.213 358,185C358,267.787 290.787,335 208,335C125.213,335 58,267.787 58,185C58,102.213 125.213,35 208,35ZM208,41C287.476,41 352,105.524 352,185C352,264.476 287.476,329 208,329C128.524,329 64,264.476 64,185C64,105.524 128.524,41 208,41Z" style="fill:none;stroke-width:1px;stroke:rgb(21,28,36);"/>
+                <g id="hub" transform="matrix(2.2,0,0,2.2,-122,-145)">
                     <circle cx="150" cy="150" r="5" style="fill:rgb(21,28,36);"/>
                 </g>
-                <g id="Sekunden">
+                <g id="indicator-seconds">
                     <g transform="matrix(0.994522,-0.104528,0.0570155,0.542466,-14.6351,27.9569)">
                         <rect x="204" y="54" width="2" height="11" style="fill:rgb(21,28,36);"/>
                     </g>
@@ -157,7 +157,7 @@
                         <rect x="204" y="54" width="2" height="11" style="fill:rgb(21,28,36);"/>
                     </g>
                 </g>
-                <g id="Stunden">
+                <g id="indicator-hours">
                     <g transform="matrix(-1.7146,5.51457e-16,-4.82437e-16,-1.5,559.493,77)">
                         <path d="M205,24L207,28L203,28L205,24Z" style="fill:rgb(21,28,36);"/>
                     </g>
@@ -195,7 +195,7 @@
                         <path d="M205,24L207,28L203,28L205,24Z" style="fill:rgb(21,28,36);"/>
                     </g>
                 </g>
-                <g id="Nummern" transform="matrix(1,0,0,1,1.65024,0.049098)">
+                <g id="Numbers" transform="matrix(1,0,0,1,1.65024,0.049098)">
                     <g transform="matrix(0.36,0,0,1,143.777,59)">
                         <text x="145.361px" y="20.699px" style="font-family:'TimesNewRomanPS-BoldMT', 'Times New Roman', serif;font-weight:700;font-size:48px;fill:rgb(21,28,36);">X<tspan x="177.049px 192.752px " y="20.699px 20.699px ">II</tspan></text>
                     </g>
@@ -233,7 +233,16 @@
                         <text x="151.014px" y="20.699px" style="font-family:'TimesNewRomanPS-BoldMT', 'Times New Roman', serif;font-weight:700;font-size:48px;fill:rgb(21,28,36);">V</text>
                     </g>
                 </g>
-                <g id="Texte" transform="matrix(1,0,0,1,0,10)">
+                <g id="Text" transform="matrix(1,0,0,1,0,10)">
+                    <g transform="matrix(0.901408,1.73183e-16,1.73183e-16,0.194333,72.4445,122.818)">
+                        <rect x="115" y="105.427" width="71" height="2.573" style="fill:rgb(21,28,36);"/>
+                    </g>
+                    <g transform="matrix(0.8,3.9443e-32,-4.93038e-32,1,82.1537,87.8207)">
+                        <text x="120.768px" y="55.267px" style="font-family:'Georgia', serif;font-size:16px;fill:rgb(21,28,36);">Madeleine</text>
+                    </g>
+                    <g transform="matrix(0.9,0,0,1,66.8465,181.821)">
+                        <text x="88.465px" y="55.267px" style="font-family:'TimesNewRomanPSMT', 'Times New Roman', serif;font-size:10px;fill:rgb(21,28,36);">9 RUE  D&apos;ALESIA<tspan x="164.927px 167.427px " y="55.267px 55.267px ">  </tspan>MARSEILLE</text>
+                    </g>
                     <g transform="matrix(2.68656e-16,-0.948387,0.939785,2.66219e-16,-102.719,497.545)">
                         <g>
                             <g transform="matrix(0.216695,0.863123,-0.9699,0.243502,569.189,-136.441)">
@@ -291,15 +300,6 @@
                                 <text x="393.913px" y="391.696px" style="font-family:'TimesNewRomanPSMT', 'Times New Roman', serif;font-size:12px;fill:rgb(21,28,36);">S</text>
                             </g>
                         </g>
-                    </g>
-                    <g transform="matrix(0.9,0,0,1,66.8465,98)">
-                        <text x="88.465px" y="55.267px" style="font-family:'TimesNewRomanPSMT', 'Times New Roman', serif;font-size:10px;fill:rgb(21,28,36);">9 RUE  D&apos;ALESIA<tspan x="164.927px 167.427px " y="55.267px 55.267px ">  </tspan>MARSEILLE</text>
-                    </g>
-                    <g transform="matrix(0.8,0,0,1,82.1537,85)">
-                        <text x="120.768px" y="55.267px" style="font-family:'Georgia', serif;font-size:16px;fill:rgb(21,28,36);">Madeleine</text>
-                    </g>
-                    <g transform="matrix(0.901408,1.73183e-16,1.73183e-16,0.194333,72.4445,120.939)">
-                        <rect x="115" y="105.427" width="71" height="2.573" style="fill:rgb(21,28,36);"/>
                     </g>
                 </g>
             </g>
