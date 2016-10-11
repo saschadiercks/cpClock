@@ -1,0 +1,20 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "Chrome: Launch (with sourcemaps)",
+            "type": "chrome",
+            "request": "launch",
+			"url": "http://127.0.0.1:8080/",
+            "webRoot": "${workspaceRoot}/htdocs/index.php",
+            "sourceMaps": true
+        },
+        {
+            "name": "Firefox: Launch (with sourcemaps)",
+            "type": "firefox",
+            "request": "launch",
+			"url": "http://127.0.0.1:8080/",
+            "webRoot": "${workspaceRoot}/htdocs/index.php"
+        }
+    ]
+}
